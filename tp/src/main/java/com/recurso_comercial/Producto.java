@@ -1,10 +1,16 @@
 package com.recurso_comercial;
 
+import com.excepciones.DatoInvalidoException;
 import com.recurso_personal.Proveedor;
 
 public class Producto extends Articulo {
 
-    public Producto(String codigo, String nombre, double precio, String tipo, Proveedor proveedor) {
+    // Uso exclusivo de Jackson al leer el archivo.
+    private Producto() {
+    }
+
+    public Producto(String codigo, String nombre, double precio, String tipo, Proveedor proveedor)
+            throws DatoInvalidoException {
         super(codigo, nombre, precio, tipo, proveedor);
     }
 
@@ -14,7 +20,12 @@ public class Producto extends Articulo {
     }
 
     @Override
-    public double getSubtotal() {
-        return getPrecio();
+    public void registrarEnProveedor() {
+        getProveedor().agregarProducto(this);
+    }
+
+    @Override
+    public void quitarDeProveedor() {
+        getProveedor().quitarProducto(this);
     }
 }
