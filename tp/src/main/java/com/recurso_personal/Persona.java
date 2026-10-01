@@ -1,4 +1,4 @@
-package com.example;
+package com.recurso_personal;
 
 /**
  * Clase abstracta base para toda persona vinculada a la empresa.

@@ -1,6 +1,8 @@
-package com.example;
+package com.recurso_comercial;
 
-public class Producto extends ItemFacturable {
+import com.recurso_personal.Proveedor;
+
+public class Producto extends Articulo {
 
     public Producto(String codigo, String nombre, double precio, String tipo, Proveedor proveedor) {
         super(codigo, nombre, precio, tipo, proveedor);

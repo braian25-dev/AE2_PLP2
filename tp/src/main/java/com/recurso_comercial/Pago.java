@@ -1,4 +1,4 @@
-package com.example;
+package com.recurso_comercial;
 
 import java.time.LocalDate;
 

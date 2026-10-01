@@ -1,6 +1,9 @@
-package com.example;
+package com;
 
 import java.time.LocalDate;
+
+import com.recurso_comercial.*;
+import com.recurso_personal.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,8 +32,8 @@ public class Main {
         Factura factura1 = new Factura(1, LocalDate.now(), cliente1, empleado1);
  
         // Demostracion polimorfica: mismo arreglo para Producto y Servicio
-        ItemFacturable[] itemsFactura = { producto1, servicio1 };
-        for (ItemFacturable item : itemsFactura) {
+        Articulo[] itemsFactura = { producto1, servicio1 };
+        for (Articulo item : itemsFactura) {
             factura1.agregarItem(item);
             System.out.println(item.getDescripcion() + " -> $" + item.getSubtotal());
         }

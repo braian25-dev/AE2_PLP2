@@ -1,4 +1,6 @@
-package com.example;
+package com.recurso_personal;
+
+import com.recurso_comercial.Factura;
 
 /**
  * Cliente de la empresa, asociado a un historial de facturas.

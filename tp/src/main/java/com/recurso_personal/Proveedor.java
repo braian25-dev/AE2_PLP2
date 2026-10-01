@@ -1,4 +1,7 @@
-package com.example;
+package com.recurso_personal;
+
+import com.recurso_comercial.Producto;
+
 /**
  * Proveedor de productos/servicios. Mantiene su catálogo mediante
  * un arreglo de capacidad fja (no colecciones de Java).

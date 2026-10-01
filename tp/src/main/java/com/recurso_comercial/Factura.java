@@ -1,6 +1,9 @@
-package com.example;
+package com.recurso_comercial;
 
 import java.time.LocalDate;
+
+import com.recurso_personal.Cliente;
+import com.recurso_personal.Empleado;
 
 public class Factura {
 
@@ -10,7 +13,7 @@ public class Factura {
     private LocalDate fechaEmision;
     private Cliente cliente;
     private Empleado empleado;
-    private ItemFacturable[] items;
+    private Articulo[] items;
     private int cantidadItems;
     private Pago pago;
 
@@ -19,11 +22,11 @@ public class Factura {
         this.fechaEmision = fechaEmision;
         this.cliente = cliente;
         this.empleado = empleado;
-        this.items = new ItemFacturable[CAPACIDAD_MAXIMA];
+        this.items = new Articulo[CAPACIDAD_MAXIMA];
         this.cantidadItems = 0;
     }
 
-    public void agregarItem(ItemFacturable item) {
+    public void agregarItem(Articulo item) {
         if (cantidadItems < items.length) {
             items[cantidadItems] = item;
             cantidadItems++;

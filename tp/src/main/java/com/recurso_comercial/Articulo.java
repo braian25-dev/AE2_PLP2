@@ -1,6 +1,8 @@
-package com.example;
+package com.recurso_comercial;
 
-public class ItemFacturable {
+import com.recurso_personal.Proveedor;
+
+public class Articulo {
 
     private String codigo;
     private String nombre;
@@ -8,7 +10,7 @@ public class ItemFacturable {
     private String tipo;
     private Proveedor proveedor;
 
-    public ItemFacturable(String codigo, String nombre, double precio, String tipo, Proveedor proveedor) {
+    public Articulo(String codigo, String nombre, double precio, String tipo, Proveedor proveedor) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
