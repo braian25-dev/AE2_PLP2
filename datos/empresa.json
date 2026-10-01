@@ -1,0 +1,109 @@
+{
+  "facturas" : [ {
+    "@id" : 1,
+    "numero" : 1,
+    "fechaEmision" : "2026-10-01",
+    "cliente" : {
+      "tipoPersona" : "Cliente",
+      "@id" : 1,
+      "nombre" : "Braian",
+      "domicilio" : "primer docmicilio",
+      "dni" : "44435178",
+      "telefono" : "646816",
+      "limiteCredito" : 5654651.0,
+      "categoria" : "PREMIUM",
+      "historial" : [ 1, {
+        "@id" : 2,
+        "numero" : 2,
+        "fechaEmision" : "2026-10-01",
+        "cliente" : 1,
+        "empleado" : {
+          "tipoPersona" : "Empleado",
+          "@id" : 2,
+          "nombre" : "Alejandro",
+          "domicilio" : "primer domicilio",
+          "dni" : "46561684",
+          "telefono" : "65164684",
+          "salario" : 455000.0,
+          "puesto" : "ADMINISTRATIVO",
+          "fechaIngreso" : "2026-09-30",
+          "departamento" : {
+            "@id" : 1,
+            "nombre" : "Primer departamento",
+            "presupuesto" : 156548.0,
+            "responsable" : 2,
+            "empleados" : [ 2 ]
+          }
+        },
+        "items" : [ {
+          "tipoArticulo" : "Servicio",
+          "@id" : 1,
+          "codigo" : "4",
+          "nombre" : "servicio barato",
+          "precio" : 45.0,
+          "tipo" : "barato",
+          "proveedor" : {
+            "tipoPersona" : "Proveedor",
+            "@id" : 3,
+            "nombre" : "primer nombre",
+            "domicilio" : "primer domicilio",
+            "dni" : "12345678",
+            "telefono" : "123456",
+            "razonSocial" : "camioneros",
+            "cuit" : "30-12345678-9",
+            "productos" : [ {
+              "tipoArticulo" : "Producto",
+              "@id" : 2,
+              "codigo" : "1",
+              "nombre" : "primer producto",
+              "precio" : 1.5684684E7,
+              "tipo" : "periferico",
+              "proveedor" : 3
+            }, {
+              "tipoArticulo" : "Producto",
+              "@id" : 3,
+              "codigo" : "3",
+              "nombre" : "producto barato",
+              "precio" : 5.0,
+              "tipo" : "barato",
+              "proveedor" : 3
+            } ]
+          }
+        } ],
+        "pagos" : [ ],
+        "emitida" : true
+      }, {
+        "@id" : 3,
+        "numero" : 3,
+        "fechaEmision" : "2026-10-01",
+        "cliente" : 1,
+        "empleado" : 2,
+        "items" : [ 3 ],
+        "pagos" : [ ],
+        "emitida" : false
+      } ]
+    },
+    "empleado" : 2,
+    "items" : [ 3, 1 ],
+    "pagos" : [ {
+      "monto" : 20.0,
+      "fecha" : "2026-10-01",
+      "metodoPago" : "EFECTIVO",
+      "estado" : "PARCIAL"
+    } ],
+    "emitida" : true
+  }, 2, 3 ],
+  "departamentos" : [ 1 ],
+  "empleados" : [ 2 ],
+  "clientes" : [ 1 ],
+  "proveedores" : [ 3 ],
+  "articulos" : [ 2, {
+    "tipoArticulo" : "Servicio",
+    "@id" : 4,
+    "codigo" : "2",
+    "nombre" : "reparacion",
+    "precio" : 6.48461651E8,
+    "tipo" : "reparacion de computador",
+    "proveedor" : 3
+  }, 3, 1 ]
+}

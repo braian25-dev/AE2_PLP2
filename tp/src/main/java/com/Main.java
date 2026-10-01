@@ -34,7 +34,6 @@ public class Main {
             System.out.println("6. Facturas y pagos");
             System.out.println("7. Ordenar artículos");
             System.out.println("8. Guardar datos en archivo");
-            System.out.println("9. Cargar datos desde archivo");
             System.out.println("0. Salir");
             opcion = leerEntero("Seleccione una opción: ");
 
